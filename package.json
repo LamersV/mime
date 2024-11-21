@@ -1,0 +1,28 @@
+{
+  "name": "mime",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "mime",
+    "mime-types",
+    "media-types"
+  ],
+  "author": "LamersV",
+  "license": "MIT",
+  "description": "Minimalist MIME type mapping package",
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "typescript": "^5.6.3"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "default": "./index.js",
+      "types": "./index.d.ts"
+    }
+  }
+}
