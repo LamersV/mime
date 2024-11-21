@@ -30,7 +30,7 @@ A simple utility for working with MIME types and file extensions in JavaScript/T
 To use this utility, include it in your project:
 
 ```bash
-npm install mime-type-utility
+npm install lamersv-mime
 ```
 
 ---
@@ -52,7 +52,7 @@ This function determines the MIME type of a file based on its extension. If the 
 #### Example
 
 ```javascript
-import { mimeType } from './mimeTypeUtility';
+import { mimeType } from './lamersv-mime';
 
 console.log(mimeType('picture.jpg')); // Output: 'image/jpeg'
 console.log(mimeType('unknownfile.xyz')); // Output: 'application/octet-stream'
@@ -75,7 +75,7 @@ This function retrieves the first file extension associated with a MIME type. If
 #### Example
 
 ```javascript
-import { extension } from './mimeTypeUtility';
+import { extension } from './lamersv-mime';
 
 console.log(extension('image/jpeg')); // Output: 'jpg'
 console.log(extension('application/xml')); // Output: null
@@ -90,7 +90,7 @@ Here are a few examples to demonstrate how this utility works:
 ### Example 1: Mapping File Extensions to MIME Types
 
 ```javascript
-import { mimeType } from './mimeTypeUtility';
+import { mimeType } from './lamersv-mime';
 
 console.log(mimeType('document.txt')); // Output: 'text/plain'
 console.log(mimeType('image.jpeg'));   // Output: 'image/jpeg'
@@ -100,7 +100,7 @@ console.log(mimeType('unknown.ext'));  // Output: 'application/octet-stream'
 ### Example 2: Mapping MIME Types to Extensions
 
 ```javascript
-import { extension } from './mimeTypeUtility';
+import { extension } from './lamersv-mime';
 
 console.log(extension('text/plain'));  // Output: 'txt'
 console.log(extension('application/json')); // Output: 'json'
