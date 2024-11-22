@@ -1,5 +1,5 @@
 
-# MIME Type Utility
+# lamers/MIME
 
 A simple utility for working with MIME types and file extensions in JavaScript/TypeScript. This module provides two functions:
 
@@ -30,7 +30,7 @@ A simple utility for working with MIME types and file extensions in JavaScript/T
 To use this utility, include it in your project:
 
 ```bash
-npm install lamersv-mime
+npm install lamers-mime
 ```
 
 ---
@@ -52,7 +52,7 @@ This function determines the MIME type of a file based on its extension. If the 
 #### Example
 
 ```javascript
-import { mimeType } from './lamersv-mime';
+import { mimeType } from './lamers-mime';
 
 console.log(mimeType('picture.jpg')); // Output: 'image/jpeg'
 console.log(mimeType('unknownfile.xyz')); // Output: 'application/octet-stream'
@@ -62,7 +62,7 @@ console.log(mimeType('unknownfile.xyz')); // Output: 'application/octet-stream'
 
 ### `extension(mime: string): string | null`
 
-This function retrieves the first file extension associated with a MIME type. If the MIME type is not found, it returns `null`.
+This function retrieves all file extensions associated with a MIME type. If the MIME type is not found, it returns `null`.
 
 #### Parameters
 
@@ -70,14 +70,14 @@ This function retrieves the first file extension associated with a MIME type. If
 
 #### Returns
 
-- The file extension (string) or `null` if not found.
+- The file extensions (string[]) or `null` if not found.
 
 #### Example
 
 ```javascript
-import { extension } from './lamersv-mime';
+import { extension } from 'lamers-mime';
 
-console.log(extension('image/jpeg')); // Output: 'jpg'
+console.log(extension('image/jpeg')); // Output: ['jpg']
 console.log(extension('application/xml')); // Output: null
 ```
 
@@ -90,7 +90,7 @@ Here are a few examples to demonstrate how this utility works:
 ### Example 1: Mapping File Extensions to MIME Types
 
 ```javascript
-import { mimeType } from './lamersv-mime';
+import { mimeType } from './lamers-mime';
 
 console.log(mimeType('document.txt')); // Output: 'text/plain'
 console.log(mimeType('image.jpeg'));   // Output: 'image/jpeg'
@@ -100,10 +100,10 @@ console.log(mimeType('unknown.ext'));  // Output: 'application/octet-stream'
 ### Example 2: Mapping MIME Types to Extensions
 
 ```javascript
-import { extension } from './lamersv-mime';
+import { extension } from './lamers-mime';
 
-console.log(extension('text/plain'));  // Output: 'txt'
-console.log(extension('application/json')); // Output: 'json'
+console.log(extension('text/plain'));  // Output: ['txt']
+console.log(extension('application/json')); // Output: ['json']
 console.log(extension('unknown/mime')); // Output: null
 ```
 

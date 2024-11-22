@@ -15,12 +15,12 @@ function mimeType(filename: string): string {
 }
 
 /**
-  * This function returns the extension of a file based on its MIME type.
+  * This function returns the extension(s) of a file based on its MIME type.
   * If the extension is not found, it returns null.
   * @param {string} mime - The MIME type of the file.
 */
-function extension(mime: string): string | null {
-  return Object.keys(MIMETYPES).find(key => key === mime) || null;
+function extension(mime: string): string[] | null {
+  return MIMETYPES[mime] || null;
 }
 
 export { mimeType, extension };

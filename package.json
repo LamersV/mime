@@ -1,6 +1,6 @@
 {
-  "name": "lamersv-mime",
-  "version": "1.0.1",
+  "name": "lamers-mime",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "build": "tsc"
@@ -19,14 +19,11 @@
   },
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.js",
-      "default": "./index.js",
-      "types": "./index.d.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
-  },
-  "dependencies": {
-    "undici-types": "^6.19.8"
   },
   "repository": {
     "type": "git",
